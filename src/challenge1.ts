@@ -27,7 +27,8 @@ function searchBook(title?: string): void {
     console.log("Please provide a title to search.");
     return;
   }
-  let foundBooks = books.filter((v) => v.title.includes(title as string));
+
+  let foundBooks = books.filter((v) => v.title.includes(title));
   if (foundBooks.length === 0) {
     console.log(`No books found with title containing "${title}".`);
     return;
